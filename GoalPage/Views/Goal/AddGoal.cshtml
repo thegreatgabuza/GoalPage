@@ -1,0 +1,37 @@
+﻿@model GoalPage.Models.AddGoalViewModel
+@{
+}
+
+ 
+<p>The first step to achieving your goal is to make it clear and specific.
+    What do you want to achieve? Once you know what your goal is, you can start to think about what you need to do to achieve it.
+    What do you know about your goal? What do you not know? There is a lot of information available on the market, but it can be hard to know where to start. 
+    That's where we come in. We can help you to identify the information that you need to achieve your goal and we can provide you with the resources to help you get there.</p>
+
+<h2>Add A Goal </h2>
+<form method="post" action="AddGoal">
+    <div class="mb-3">
+        <label for="" class="form-label">Name Of Your Goal</label>
+        <input class="form-control" type="text" placeholder="example: Become a backend developer" aria-label="default input example" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">What You Know</label>
+        <input class="form-control" type="text" placeholder="example: basic programming" aria-label="default input example" asp-for="WhatYouKnow">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">What's On The Market:<p> Go look at job posts on LinkedIn</p> </label>
+        <input class="form-control" type="text" placeholder="example: Python, React" aria-label="default input example" asp-for="WhatsOnTheMarket">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">What You Need To Learn</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="example:
+        1.Python, 
+        2.Databases 
+        3.APIs" rows="4" asp-for="WhatYouNeedToLearn" ></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Start Date</label>
+        <input type="date" class="form-control" asp-for="CreatedDate">
+    </div>
+    <button type="submit" class="btn btn-danger">Save Goal</button>
+</form>
